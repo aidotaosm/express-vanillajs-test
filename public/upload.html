@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon.png">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/27152874f8.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+  <title>Upload</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar bg-primary navbar-expand-lg navbar-dark">
+    <img href="index.html" class="logo" src="images/logo.png" alt="logo">
+    <a class="navbar-brand" href="index.html">IUB Analytics System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="btn btn-info about-btn" href="about.html">About</a>
+          <a class="btn btn-outline-light upload-btn" href="upload.html">Upload</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="main">
+    <h1>Upload</h1>
+    <hr />
+    <br />
+
+    <!-- Automatic Data Entry -->
+    <h4><b>Automatic Data Entry</b></h4>
+    <p>Upload a properly formatted CSV file and automatically enter data into the database.</p>
+    <br />
+    <form id="automaticform" class="was-validated">
+      <div class="form-group">
+        <label for="mf-name">Name</label>
+        <input type="text" class="form-control" id="mf-name" aria-describedby="nameHelp" placeholder="Enter your name">
+        <small id="nameHelp" class="form-text text-muted">This will not be entered into the database.</small>
+      </div>
+      <br />
+      <h5>Follow the Reference Image Layout</h5><br />
+      <a href="images/Reference.png"><img class="ref-img" src="images/Reference.png" alt="Reference Image" /></a> <br />
+      <br />
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+        <label class="custom-file-label" for="validatedCustomFile">Choose a CSV file...</label>
+        <div class="invalid-feedback">Please upload a valid properly formated CSV file</div>
+      </div>
+      <br /><br />
+      <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+
+    <!-- Manual Data Entry -->
+    <br />
+    <hr /><br />
+    <h4><b>Manual Data Entry</b></h4>
+    <p>Fill up the required fields and enter the data manually into the database.</p>
+    <br />
+    <form id="manualform">
+      <div class="form-group">
+        <label for="mf-name">Name</label>
+        <input type="text" class="form-control" id="mf-name" aria-describedby="nameHelp" placeholder="Enter your name">
+        <small id="nameHelp" class="form-text text-muted">This will not be entered into the database.</small>
+      </div>
+      <div class="form-group">
+        <label for="mf-schooltitle">School Title</label>
+        <select class="form-control" id="exampleFormControlSelect1" required>
+          <option>SETS</option>
+          <option>SBE</option>
+          <option>SELS</option>
+          <option>SLASS</option>
+          <option>SPPH</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="mf-courseName">Course Name</label>
+        <input type="text" class="form-control" id="mf-courseName" placeholder="Enter the Course Name" required>
+      </div>
+      <div class="form-group">
+        <label for="mf-courseID">Coffer Course ID</label>
+        <input type="text" class="form-control" id="mf-courseID" placeholder="Enter the Course ID" required>
+      </div>
+      <div class="form-group">
+        <label for="mf-cofferID">Coffered With</label>
+        <input type="text" class="form-control" id="mf-cofferID" placeholder="Enter the Coffered with Course ID" required>
+      </div>
+      <div class="form-group">
+        <label for="mf-credit">Credit Hour</label>
+        <input type="number" class="form-control" id="mf-credit" placeholder="Enter the Credit Hours for the Course" required>
+      </div>
+      <div class="form-group">
+        <label for="mf-section">Section</label>
+        <input type="number" class="form-control" id="mf-section" placeholder="Enter the Section Number" required>
+      </div>
+      <div class="form-group">
+        <label for="mf-sectionCapacity">Section Capcaity</label>
+        <input type="number" class="form-control" id="mf-sectionCapacity" placeholder="Enter the Capacity of the Section" required>
+      </div>
+      <div class="form-group">
+        <label for="mf-enrolled">Students Enrolled</label>
+        <input type="number" class="form-control" id="mf-enrolled" placeholder="Enter the Number of Students Enrolled" required>
+      </div>
+      <div class="form-group">
+        <label for="mf-block">Section Block Status</label>
+        <select class="form-control" id="exampleFormControlSelect1" required>
+          <option>-1</option>
+          <option>0</option>
+          <option>B-0</option>
+          <option>B-1</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="mf-roomID">Classroom ID</label>
+        <input type="text" class="form-control" id="mf-roomID" placeholder="Enter the Classroom ID" required>
+      </div>
+      <div class="form-group">
+        <label for="mf-roomCapacity">Clasroom Capcaity</label>
+        <input type="number" class="form-control" id="mf-roomCapacity" placeholder="Enter the Capacity of the Classroom" required>
+      </div>
+      <div class="form-group">
+        <label for="mf-faculty">Faculty Name</label>
+        <input type="text" class="form-control" id="mf-faculty" aria-describedby="facultyHelp" placeholder="Enter the Full Name of Faculty" required>
+        <small id="facultytHelp" class="form-text text-muted">Enter in this format: (FacultyID)-(FullName)</small>
+      </div>
+      <div class="form-group">
+        <label for="mf-start">Class Start Time</label>
+        <input type="text" class="form-control" id="mf-start" aria-describedby="startHelp" placeholder="Enter the Starting Time" required>
+        <small id="startHelp" class="form-text text-muted">Enter the time in 24-Hour format seperated with a colon(:). Example: 12:30</small>
+      </div>
+      <div class="form-group">
+        <label for="mf-end">Class End Time</label>
+        <input type="text" class="form-control" id="mf-end" aria-describedby="endHelp" placeholder="Enter the Ending Time" required>
+        <small id="endHelp" class="form-text text-muted">Enter the time in 24-Hour format seperated with a colon(:). Example: 2:00</small>
+      </div>
+      <div class="form-group">
+        <label for="mf-day">Class Days</label>
+        <select class="form-control" id="exampleFormControlSelect1" required>
+          <option>ST</option>
+          <option>MW</option>
+          <option>S</option>
+          <option>T</option>
+          <option>M</option>
+          <option>W</option>
+          <option>F</option>
+          <option>R</option>
+          <option>A</option>
+        </select>
+      </div>
+      <br />
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="mf-Check1" required>
+        <label class="form-check-label" for="mf-Check1">Confirm that all the data have been entered correctly.</label>
+      </div><br />
+      <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+
+  </section>
+
+  <!-- JavaScript -->
+  <script src="index.js" charset="utf-8"></script>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+<footer style="text-align:center; padding: 20px">
+  <h5>
+    <hr /><br />
+    Made with ❤️ by IUB Students
+    <br />
+  </h5>
+  <p>
+    Database Management Project
+  </p>
+</footer>
+
+</html>

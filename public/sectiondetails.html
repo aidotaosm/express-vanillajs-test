@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon.png">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/27152874f8.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+  <title>Analytics</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar bg-primary navbar-expand-lg navbar-dark">
+    <img href="index.html" class="logo" src="images/logo.png" alt="logo">
+    <a class="navbar-brand" href="index.html">IUB Analytics System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="btn btn-info about-btn" href="about.html">About</a>
+          <a class="btn btn-outline-light upload-btn" href="upload.html">Upload</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="main">
+    <h1>Section Details for All Schools</h1>
+    <hr /><br />
+    <form id="df-form" name="df_form" action="/sectiondetails" method="POST">
+      <div class="form-row">
+        <div class="col">
+          <div class="form-group">
+            <label for="df-semester">Semester</label>
+            <select name="df_semester" class="form-control" id="df-semester" required>
+              <option>Spring</option>
+              <option>Summer</option>
+              <option>Autumn</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group col-md-6">
+            <label for="df-year">Year</label>
+            <input name="df_year" type="number" class="form-control" id="df-year" placeholder="Enter Semester Year" required>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="df-student">Number of Students less than</label>
+        <input name="df_student" type="number" class="form-control" id="df-student" placeholder="Any number greater than zero">
+      </div>
+      <div class="form-check">
+        <input name="df_detail" type="checkbox" class="form-check-input" id="df-detail">
+        <label class="form-check-label" for="df-detail">Also provide a detailed view.</label>
+      </div><br />
+    </form>
+    <button name="df" type="submit" class="btn btn-primary" onClick="selectionList(this.name)">Add to Selection</button>
+  </section>
+
+  <section class="selection">
+    <div class="row">
+      <div class="col">
+        <h3 id="seltext">Selection List (Max 3)</h3>
+      </div>
+      <div class="col">
+        <button name="df" type="submit" class="btn btn-outline-danger clear" onClick="clearList(this.name)" style="float:right; margin:0">Clear Selection</button>
+      </div>
+    </div>
+    <hr /><br />
+    <ul>
+      <li>
+        <h5 id="df_li1"></h5>
+      </li>
+      <li>
+        <h5 id="df_li2"></h5>
+      </li>
+      <li>
+        <h5 id="df_li3"></h5>
+      </li>
+    </ul>
+  </section>
+
+  <section class=main>
+    <button type="submit" class="btn btn-info btn-block">Generate</button>
+    <br />
+    <hr /><br />
+  </section>
+
+  <section class="chartarea">
+    <h3>Generated Analytics</h3>
+    <hr /><br />
+  </section>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.js"></script>
+
+  <!-- JavaScript -->
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+<footer style="text-align:center; padding: 20px">
+  <h5>
+    <hr /><br />
+    Made with ❤️ by IUB Students
+    <br />
+  </h5>
+  <p>
+    Database Management Project
+  </p>
+</footer>
+
+</html>

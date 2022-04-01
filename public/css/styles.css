@@ -1,0 +1,157 @@
+body {
+  background-color: #f7f8fb;
+  font-family: Montserrat;
+}
+
+h1, h2 {
+  font-family: Ubuntu;
+  color: #454545;
+}
+
+h3 {
+  font-family: Montserrat;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.logo {
+  max-height: 48px;
+  filter: invert();
+  padding: 5px 10px;
+}
+
+.navbar {
+  box-shadow: 4px 0 4px 2px grey;
+  margin-bottom: 10px;
+}
+
+.nav-item {
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  font-family: Ubuntu;
+  font-size: 2em;
+}
+
+.upload-btn {
+  padding: 10px 40px;
+  margin: auto 5px;
+}
+
+.about-btn {
+  padding: 10px 40px;
+  margin: auto 5px;
+  background-color: #F0FFFF;
+  color: black;
+}
+
+.about-btn:hover {
+  background-color: white;
+  opacity: 80%;
+  color: black;
+}
+
+.main {
+  padding: 10px 20px;
+}
+
+.amount {
+  padding-top: 20px;
+}
+
+.sectiontwo {
+  padding: 40px 0;
+  margin: 0;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+}
+
+.line {
+  width: 5%;
+  border: 10px dotted;
+  border-style: none none dotted;
+  color: white;
+  opacity: 10%;
+}
+
+.btn-block {
+  width: 50%;
+  height: 80px;
+  min-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dependencies {
+  font-size: 20px;
+  font-family: Montserrat;
+}
+
+.ref-img {
+  width: 100%;
+}
+
+.selection {
+  border: 2px #dfdfdf solid;
+  padding: 3%;
+  margin: 4% 5%;
+  background-color: 007bff;
+}
+
+.chartarea {
+  border: 2px #dfdfdf solid;
+  background-color: #fff;
+  padding: 3%;
+  margin: 2%;
+  text-align: center;
+}
+
+#section-form .form-check-label {
+  margin-right: 5px;
+}
+
+.clear {
+}
+
+@media screen and (max-width: 500px) {
+  .titlename {
+    font-size: 20px;
+  }
+
+  .page-name {
+    font-size: 30px;
+  }
+
+  .d-block {
+    min-height: 130px;
+    object-fit: cover;
+  }
+
+  .btn-block {
+    width: 90%;
+    margin: 0 20px 0 20px;
+    min-width: 100px;
+  }
+
+  #seltext {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width:501px) {
+  .btn-block {
+    width: 95%;
+    margin: 0 20px 0 20px;
+    min-width: 100px;
+  }
+
+  .d-block {
+    min-height: 280px;
+    object-fit: cover;
+  }
+}

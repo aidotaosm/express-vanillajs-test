@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="images/favicon.png" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/27152874f8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar bg-primary navbar-expand-lg navbar-dark">
+      <img href="/index.html" class="logo" src="images/logo.png" alt="logo" />
+      <a class="navbar-brand titlename" href="index.html"
+        >IUB Analytics <wbr />System</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="btn btn-info about-btn" href="about.html">About</a>
+            <a class="btn btn-outline-light upload-btn" href="upload.html"
+              >Upload</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="main">
+      <h1 class="page-name">Dashboard</h1>
+      <hr />
+      <br />
+    </section>
+
+    <!-- Carousel -->
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-ride="carousel"
+      data-interval="3500"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            class="d-block w-100"
+            src="images/carousel1.png"
+            alt="First slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="images/carousel2.png"
+            alt="Second slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="images/carousel3.png"
+            alt="Third slide"
+          />
+        </div>
+      </div>
+    </div>
+
+    <section class="main">
+      <br />
+      <hr />
+      <br />
+      <br />
+      <br />
+
+      <!-- Dashboard Cards -->
+      <div class="row">
+        <div class="Stats col-lg-4 col md-6">
+          <div class="card text-center border-primary mb-3">
+            <div class="card-header bg-primary">
+              <h4 style="color: white">Total Capacity</h4>
+            </div>
+            <div class="card-body">
+              <i class="fa-solid fa-user-tie fa-4x"></i>
+              <h1 id="numcapcity" class="amount"><b>50350</b></h1>
+            </div>
+          </div>
+        </div>
+        <div class="Stats col-lg-4 col md-6">
+          <div class="card text-center border-primary mb-3">
+            <div class="card-header bg-primary">
+              <h4 style="color: white">Schools</h4>
+            </div>
+            <div class="card-body">
+              <i class="fa-solid fa-graduation-cap fa-4x"></i>
+              <h1 id="numschool" class="amount"><b>6</b></h1>
+            </div>
+          </div>
+        </div>
+        <div class="Stats col-lg-4 col md-6">
+          <div class="card text-center border-primary mb-3">
+            <div class="card-header bg-primary">
+              <h4 style="color: white">Departments</h4>
+            </div>
+            <div class="card-body">
+              <i class="fa-solid fa-building fa-4x"></i>
+              <h1 id="numdepartment" class="amount"><b>15</b></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <hr />
+    </section>
+
+    <!-- Analytics Section -->
+    <section class="sectiontwo">
+      <h1 class="AnalyticsText" style="color: white; font-size: 60px">
+        Analytics
+      </h1>
+      <hr
+        class="lineAT"
+        style="border: 1px solid white; border-style: none none solid"
+      />
+      <br />
+      <br />
+      <a href="revenue.html"
+        ><button type="button" class="btn btn-outline-light btn-lg btn-block">
+          Analysis of <wbr />Generated Revenue
+        </button></a
+      >
+      <br />
+      <hr class="line" />
+      <br />
+      <a href="sectiondetails.html"
+        ><button type="button" class="btn btn-light btn-lg btn-block">
+          Section Details for <wbr />All Schools
+        </button></a
+      >
+      <br />
+      <hr class="line" />
+      <br />
+      <a href="sectionanalysis.html"
+        ><button type="button" class="btn btn-outline-light btn-lg btn-block">
+          Section Analysis <wbr />for SETS
+        </button></a
+      >
+      <br />
+      <hr class="line" />
+      <br />
+      <a href="unusedresource.html"
+        ><button type="button" class="btn btn-light btn-lg btn-block">
+          Unused <wbr />Resource Analysis
+        </button></a
+      >
+      <br />
+      <hr class="line" />
+      <br />
+      <a href="classroomrequirement.html"
+        ><button type="button" class="btn btn-outline-light btn-lg btn-block">
+          Classroom <wbr />Requirement Analysis
+        </button></a
+      >
+      <br />
+      <br />
+      <hr style="border: 1px solid white; border-style: none none solid" />
+    </section>
+
+    <hr />
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.js"></script>
+
+    <!-- JavaScript -->
+    <script src="index.js" charset="utf-8"></script>
+    <script>
+      const lala = () => {
+        fetch("http://localhost:3000/testAPI")
+          .then((response) => {
+            console.log(response);
+            response.json();
+          })
+          .then((data) => console.log(data));
+      };
+      lala();
+    </script>
+  </body>
+
+  <footer style="text-align: center; padding: 20px">
+    <h5>Made with ❤️ by IUB Students</h5>
+    <p>Database Management Project</p>
+  </footer>
+</html>
