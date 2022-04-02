@@ -236,31 +236,8 @@
     <button onclick="renderUsers('Spring','2021')" class="btn btn-secondary">
       Get Data
     </button>
-    <script>
-      async function lala(paramSem, paramYear) {
-        let url =
-          "http://localhost:3000/testAPI?sem=" +
-          paramSem +
-          "&year=" +
-          paramYear;
-        try {
-          let res = await fetch(url);
-          return await res.json();
-        } catch (error) {
-          console.log(error);
-        }
-      }
-
-      async function renderUsers(paramSem, paramYear) {
-        let user = await lala(paramSem, paramYear);
-        let html = "";
-        let htmlSegment = `<div class="user">${user.asd}</div>`;
-
-        html += htmlSegment;
-
-        let container = document.querySelector("#lele ");
-        container.innerHTML = html;
-      }
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="./charts.js">
 
       // const lala = (paramSem, paramYear) => {
       //   fetch(
@@ -273,6 +250,7 @@
       //     .then((data) => console.log(data));
       // };
     </script>
+    <canvas id="revenue-chart"></canvas>
     <div id="lele"></div>
   </body>
 
