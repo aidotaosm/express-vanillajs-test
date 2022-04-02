@@ -233,17 +233,47 @@
 
     <!-- JavaScript -->
     <script src="index.js" charset="utf-8"></script>
+    <button onclick="renderUsers('Spring','2021')" class="btn btn-secondary">
+      Get Data
+    </button>
     <script>
-      const lala = () => {
-        fetch("http://localhost:3000/testAPI")
-          .then((response) => {
-            console.log(response);
-            response.json();
-          })
-          .then((data) => console.log(data));
-      };
-      lala();
+      async function lala(paramSem, paramYear) {
+        let url =
+          "http://localhost:3000/testAPI?sem=" +
+          paramSem +
+          "&year=" +
+          paramYear;
+        try {
+          let res = await fetch(url);
+          return await res.json();
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      async function renderUsers(paramSem, paramYear) {
+        let user = await lala(paramSem, paramYear);
+        let html = "";
+        let htmlSegment = `<div class="user">${user.asd}</div>`;
+
+        html += htmlSegment;
+
+        let container = document.querySelector("#lele ");
+        container.innerHTML = html;
+      }
+
+      // const lala = (paramSem, paramYear) => {
+      //   fetch(
+      //     "http://localhost:3000/testAPI?sem=" + paramSem + "&year=" + paramYear
+      //   )
+      //     .then((response) => {
+      //       // response.json();
+      //       // console.log(response);
+      //     })
+      //     .then((data) => console.log(data));
+      // };
     </script>
+    <div id="lele"></div>
   </body>
 
   <footer style="text-align: center; padding: 20px">

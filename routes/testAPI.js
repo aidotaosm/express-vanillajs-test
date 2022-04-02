@@ -41,9 +41,14 @@ function getTotalCredits(sem, year, callback) {
     })
 }
 router.get("/", function (req, res, next) {
-    getTotalCredits("Spring", "2021", (param) => { res.send({ asd: param }); });
-    console.log('gaga');
-    console.log(gg);
+    console.log(req.query);
+    let sem = req.query.sem;
+    let year = req.query.year;
+    console.log(sem);
+    console.log(year);
+    getTotalCredits(sem, year, (param) => {
+        res.send({ asd: param });
+    });
 
 });
 module.exports = router;
